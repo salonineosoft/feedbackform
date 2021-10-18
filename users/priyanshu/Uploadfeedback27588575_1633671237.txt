@@ -1,0 +1,454 @@
+-> Php :- STand for Hypertext Preprocesor.
+   -> It is developed by Resmus Lerdorf in around 1994.
+   -> It is an server side scripting language which is used to develop dynamic websites.
+     -> server side :- need a web server 
+     -> scripting : interpriting (line by line)
+     -> dynamic :- interect with the server like database and all 
+    -> Features of php 
+       -> Open source :- freely available ,no need of licience. Source code of the particular software is avaiable for modification.
+       -> Cross Platform (platform independent): windows , linux , mac etc.
+       -> Support all web servers like Apache , IIS , Tomcat etc.
+       -> Support many databases like Mysql , Mssql , Sql , MongoDb etc 
+       -> Support OOPS concepts 
+       -> Easy to use and performance is fast 
+       -> vast community
+       -> Environmental Setup 
+          -> Xampp :- 
+            x - cross platform 
+            a- apache (server)
+            m - mysql (database)
+            p -php (php)
+            -> Download and install xampp 
+     -> Php Syntex | delimeters 
+       <?php
+
+       /// code
+
+       ?>
+     -> Extension of php is .php 
+     -> It is a case sensitive language 
+     -> How we display | output data 
+       -> *echo :- It is a language construct. we can write multiple statement at a time.
+        eg:
+          echo "--";
+       -> print :- return boolean.Only one statement 
+        print "--";
+    -> Concatenation : (.)
+    -> First php program 
+       -> store php programs in htdocs folder of xampp 
+          -> htdocs/practice 
+             first.php 
+             <?php 
+             echo "Welcome to php ";
+             ?>
+             -> How we run the php file 
+             http://localhost/practice/first.php 
+             Welcome to php 
+        -> Every statement of php is end with semicolon
+        -> Embedding Php with HTML 
+          second.php 
+          <!DOCTYPE html>
+          <html>
+            <head>
+               <title> Php Training </title>
+            </head>
+            <body>
+              <h2> <?php echo "Php Training";?></h2>
+            </body>
+          </html>
+          -> Comments :- to describe the code 
+          -> single line :- // or # 
+          -> multiple line :- /*  */
+        -> Variables :- are the temporary memory location which hold input data.
+          syntex:
+          varname=value;
+          -> Rules to define varname 
+            -> start with doller($)
+            -> after doller there is an [a-zA-Z] or [_]
+            -> after these combination of [a-zA-Z0-9_]
+            -> It cannot start with a number 
+            eg:
+            $emp_name="anuj";
+            $emp_city="noida";
+            $empSalary=45678;
+        -> Constants :- constant is a value that never be change it is fixed and permanent.eg: base URL , db username,password, company name etc.
+          -> Constant are defined using define(constantname,value)
+            -> It follow the same rules as variable name ($ is not required)
+              ** Constant names are usually written in uppercase letters.
+              define("SITE_URL","https://abc.com");
+              echo "The url is ".SITE_URL;
+        -> Php Data Types :- type declaration of variables . But in php it allocate at runtime as per the variable value.
+           -> Integers (123) , Strings("--") ,DOuble (34.56) ,Boolean(true/false) , Array( []) ,Objects({}), Null ,Resource (hold some reference)
+        -> To check the datatype we have gettype() 
+        -> Php Strings 
+          -> Strings enclosed in single quotes are treated almost literally while in double quotes replaces variable with the string representations of their value.
+             -> Escape sequence 
+                \n :- new line character 
+                \r :- carriage return 
+                \t : tab 
+                \$ 
+                \" 
+                \\ :- replace by single \
+         -> Php Operators : to perform operation 
+            -> Arthematic operators (calculations)
+             + , - , / ,* ,% ,++,--
+            -> Assignment 
+            = , += , -= ,%= , *= ,/=
+            -> Relational 
+             > , < , >= , <= 
+            -> logical 
+             && , || , ! 
+            -> comparision 
+             == :- 
+             === 
+             != 
+             !==
+            -> string operators 
+             . 
+             .= 
+            -> ternery operator 
+            (exp?true:false)
+        -> Conditions (selection)
+         if else 
+           if(a>b)
+           {
+               //a 
+           }
+           else {
+               //b 
+           }
+        -> if else if else 
+         if(cond){
+             --
+         }
+         else if(condition){
+             --
+         }
+         else if(condition){
+             --
+         }
+         else {
+
+         }
+         -> nested if :
+           if(condition){
+               if(condition){
+                   if(condition){
+                       -----
+                   }
+                   else {
+                       ---
+                   }
+               }
+               else {
+                   ---
+               }
+           }
+           else {
+               ----
+           }
+        -> switch :- decision making (performance is fast)
+        switch(exp){
+            case val : statement;
+               break; 
+            ..case 
+            ..case 
+            default : statement
+        }
+        -> Tasks 
+        -> Assign 2 values in 2 variables and swap them ?
+           1. with the help of 3rd variable 
+           2. without help of 3rd variable 
+           3. in one line or expression (---)
+        -> Assign a 3 digit number in a varible, reverse it and also find the sum of the digit of a number without using loop ?
+
+  -> In one line or expression 
+    $num1=10;
+    $num2=20;
+    *** $num1=($num1+$num2)-($num2=$num1);
+           30-10
+           20 
+  -> Wap to assign 5 subject marks in 5 variables and find total , percentage and grade ?
+  -> Wap a to assign uname and password and check using nested if ?
+  -> Wap to assign 2 values and also assign a choice and create a calculator with switch case?
+   -> Today 
+      -> Intro Php 
+      -> Installation 
+      -> Variables , Constant , Datatypes , Operators , Conditions 
+   -> Looping :- It is a process in which we can convert multi-line statements in a single line or repetation of statement.
+      -> for loop 
+      -> while loop 
+      -> do-while loop 
+        -> for loop:- condition is check at the start of the loop. If the condition is correct then loop execute then terminate.
+         eg:
+         for(initilazation; condition ; inc/dec) {
+           //statement 
+         }
+         eg:
+         for($i=1;$i<=5;$i++){
+           echo $i."<br/>";
+         }
+         ->While loop :- same as for loop , but it return boolean, it depend on the condition .
+            eg:
+            while(condition)
+            {
+              statement;
+            }
+            eg:
+            $num=5;
+            while($num>=1)
+            {
+              echo $num;
+              echo $num;
+              $num--;
+            }
+          -> do-while :- condition is check at the end of the loop so this loop execute atleast once.
+            do {
+              statement;
+            }while(condition)
+          -> break :- to terminate the loop when condition is match
+             for($i=1;$i<=20;$i++){
+               echo $i;
+                if($i==10){
+                  break;
+                }
+             }
+          -> continue :- skip the particular condition and rest of all loop is continue. 
+          eg:
+             for($i=1;$i<=10;$i++){
+              if($i==4 || $i==6 || $i==8){
+                continue;
+              }
+              echo $i;
+             }
+             1 2 3 5 7 9 10
+          -> exit :- to terminate the program.
+            if(!$con){
+               exit;
+            }
+            -> Task : 
+             1. Wap to assign a number and display its table upto 10 ?
+               5*1=5 (for)
+             2. Wap to assign a number and reverse it and also find the sum of a digit of a number ?(while)
+          ->nested loop :- loop within another loop .first inner loop is executed then outer.
+            -> inner loop reprecent columns and outer represent row 
+              for( ini ; condition ; inc/dec){
+                 for(ini; condition; inc/dec){
+                    statement;
+                 }
+              }
+              1.   
+           *
+          **
+         *** 
+        **** 
+       *****
+       2.
+       *****
+       *   *
+       *   *
+       *   *
+       *****
+       3.
+       a
+       bc 
+       def 
+       ghij
+    -> Array :- It is an group of element having different type.
+      -> Types of array 
+        -> index based array (number array)
+        -> associative array 
+        -> multi-dimension array 
+
+        -> index based array (number array) :- index type is integer and start with 0
+          syntex:
+            arrayname=arry(val,val,val);
+              or 
+            arrayname=[val,val,val,..]
+            eg:
+            $arr=[34,56,7,8,9];
+            for($i=0;$i<sizeof($arr);$i++){
+              echo $arr[$i];
+            }
+          -> Associative array :- we can define the key as well as the values as per the requirement.
+            eg:
+            $arr=[
+              "ind"=>"india",
+              "nep"=>"nepal",
+              "chi"=>"china"
+            ]
+            echo $arr[0];//error 
+            echo $arr['ind'];
+            -> to display all values of an associative array we have foreach loop 
+            eg:
+              foreach($arr as $a)
+              {
+                echo $a."<br/>";
+              }
+        -> Multi-dimensional array :- array within another array.(matrix)
+          2*2=4 
+          2*3=6 
+            $arr=[
+              [3,4,5],
+              [6,7,8]
+            ]
+
+            0 1 2 
+          0 3 4 5
+          1 6 7 8
+          echo $arr[1][1];
+          eg:
+        $details=[
+          "india"=>["cap"=>"delhi","ng"=>"hockey"],
+          "usa"=>["cap"=>"wasignton","ng"=>"baseball"],
+          "england"=>["cap"=>"london","ng"=>"cricket"],
+        ];
+          echo $arr["usa"]["ng"];//baseball 
+          -> Task (dynamic table)
+          Country Details (heading)
+          //represent all data in table 
+        S.no Country  Capital  Ngame
+
+      -> function :- used for reusability 
+        -> Every function should return a values 
+        -> one function return only 1 value at a time.
+      -> Types of function 
+         -> predefined (inbuild)
+         -> User defined 
+           -> without argument 
+           -> with argument 
+           -> without argument 
+             function abc(){
+               return "SUmit Joshi";
+             }
+             echo abc();
+           -> with argument 
+              -> call by value 
+              -> call by reference 
+                 -> call by value 
+                 function add($a,$b){
+                   return ($a+$b);
+                 }
+                 echo add(4,5);
+                 $x=10;
+                 $y=5;
+                 echo add($x,$y);
+                 -> call by reference :- we can pass only the address (variables). To define it we have & sign.
+                  function add(&$a,&$b){
+                   return ($a+$b);
+                 }
+                 echo add(4,5);//error
+                 $x=10;
+                 $y=5;
+                 echo add($x,$y);//correct
+                -> Task 1 
+              -> Wap a program to assign values in an array , and arrange in ascending order ?
+              -> Wap to make a chess ?
+                 300 table 
+                 td 40 
+              -> Wap to assign values in an array and remove the duplicate values from an array ?
+   -> Predefined methods 
+      -> Array : pop , push , shift , unshif , sort , rsort
+      -> String : trim , uppercase , lowercase , substr 
+      -> Math :- ceil() floor() round()
+      -> Date :- 
+  -> SUper global array variables :- These are the predefine variables , we can access anywhere in our application. Start with $_ 
+  eg:
+    -> $_GET[] :- used to get the form data when method is get .Also used to get query string data.
+      eg:
+        $_GET ['fieldname']
+    -> **$_POST[] :- when method is post 
+      $_POST['fieldname']
+    -> $_REQUEST[] :- for both get and post 
+      $_REQUEST['fieldname']
+    $_SESSION[] :- session 
+    $_COOKIE[] :- cookie
+    $_FILES[] :- file uploading
+
+
+    add.php 
+  <form method="post">
+  No1 : textfield (t1)
+  No2 : textfield (t2)
+  Result : textfield (t3)
+      Submit (sub)
+  -> isset() :- It is whether a variable is set and is not Null.
+    <?php 
+error_reporting(0);
+if(isset($_POST['sub']))
+{
+   $num1=$_POST['t1'];
+   $num2=$_POST['t2'];
+   $sum=$num1+$num2;
+}
+?>
+--> Task 
+   Calculator 
+  No1 : textfield 
+  No2 : textfield 
+  Choice :- Select (add, sub , mul ,div)
+  Result : textfield 
+     SUbmit 
+     -> break time
+
+ Registration Page 
+
+  Email 
+  Uname 
+  Password 
+  Confirm Password 
+  Gender 
+  City 
+  Feedback 
+     Submit 
+
+
+-> create a folder assignment1 
+  index.php (bootstrap)
+  <nav> bar (nav.php) (
+    <?php 
+    include("nav.php");
+    ?>
+    )
+  Home  Products  Calculator  Login   Contact Us
+   products.php 
+   calculator.php 
+     -> same as js assigment
+   login.php (validation and check email and password from array)
+     -> 
+       email 
+       password 
+          Submit 
+   contact.php(validation)
+       Name 
+       Email 
+       Mobile 
+       Feedback 
+          Submit 
+
+products.php 
+  $products=[
+    ["id"=>1,"pname"=>"A","price"=>345,"quantity"=>4,"image"=>"1.jpg"],
+    ["id"=>1,"pname"=>"A","price"=>345,"quantity"=>4,"image"=>"1.jpg"],
+    ["id"=>1,"pname"=>"A","price"=>345,"quantity"=>4,"image"=>"1.jpg"],
+  ]
+
+  display products in bootstrap card (in every row there is 3 products)
+   <div class="row">
+    foreach 
+      <div class="col-sm-4">
+          image 
+          pname 
+          price 
+          quantity 
+          Add Cart
+      </div>
+   </div>
+
+
+
+
+
+
+
+
